@@ -31,6 +31,20 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        duplicate_tab: duplicate_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LC(L)>,
+                <&macro_press>,
+                <&kp LA(ENTER)>,
+                <&macro_press>,
+                <&kp LALT>;
+
+            label = "DUPLICATE_TAB";
+        };
     };
 
     behaviors {
