@@ -89,7 +89,7 @@
 
         JIS_NUMBER {
             bindings = <
-&kp LEFT  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RIGHT                                   &kp SEMICOLON         &kp COLON              &none  &none  &kp ESCAPE
+&kp LEFT  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RIGHT                                   &kp SEMICOLON         &kp LS(SEMI)           &none  &none  &kp ESCAPE
 &kp LEFT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RIGHT  &bt BT_SEL 0      &kp DELETE     &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &none  &none  &none
 &kp LEFT  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT  &kp DOWN          &kp BACKSPACE  &kp LS(NUMBER_8)      &kp LS(NUMBER_9)       &none  &none  &duplicate_tab
 &kp DOWN  &kp NUMBER_0  &kt DOT       &kp F2        &kp SPACE  &kp F4            &kp KP_ENTER   &kp LS(EQUAL)                                              &none
@@ -107,10 +107,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &none                        &trans  &trans          &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &none       &trans  &trans  &duplicate_tab  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &none           &kp LG(LS(RIGHT_ARROW))  &none    &none       &trans  &trans  &trans          &trans  &trans  &trans
-&kt LG(LS(S))   &kp LG(E)               &kp LG(D)       &none                    &trans   &trans      &none   &trans                                  &trans
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &none                                 &trans  &trans          &trans  &trans  &trans
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &msc MOVE_X(15)      &trans  &trans  &duplicate_tab  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &none           &kp LG(LS(RIGHT_ARROW))  &none    &none                &trans  &trans  &trans          &trans  &trans  &trans
+&kt LG(LS(S))   &kp LG(E)               &kp LG(D)       &none                    &trans   &trans               &none   &trans                                  &trans
             >;
 
             sensor-bindings = <&ROTATE SCRL_LEFT SCRL_RIGHT>;
