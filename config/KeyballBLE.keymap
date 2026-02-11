@@ -78,30 +78,32 @@
 
         KEYBOARD {
             bindings = <
-&kp Q             &kp W    &kp E      &kp R      &kp T                                    &kp Y         &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S    &kp D      &kp F      &kp G      &mo 5          &kp DELETE     &kp H         &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X    &kp C      &kp V      &kp B      &kp LCTRL      &kp BACKSPACE  &kp N         &kp M  &kp COMMA  &kp DOT  &kp LS(QUESTION)
-&lt 2 GRAVE       &kp TAB  &kp LSHFT  &mkp RCLK  &kp SPACE  &mkp LCLK      &kp ENTER      &kp LEFT_ALT                             &lt 1 ESCAPE
+&kp Q        &kp W    &kp E      &kp R      &kp T                                    &kp Y         &kp U  &lt 5 I    &kp O    &kp P
+&kp A        &kp S    &kp D      &kp F      &kp G      &mo 5          &kp DELETE     &kp H         &kp J  &kp K      &kp L    &kp MINUS
+&kp Z        &kp X    &kp C      &kp V      &kp B      &kp LCTRL      &kp BACKSPACE  &kp N         &kp M  &kp COMMA  &kp DOT  &kp LS(QUESTION)
+&lt 2 GRAVE  &kp TAB  &kp LSHFT  &mkp RCLK  &kp SPACE  &mkp LCLK      &kp ENTER      &kp LEFT_ALT                             &lt 1 ESCAPE
             >;
 
-            sensor-bindings = <&ROTATE MOVE_Y(10) MOVE_X(10)>;
+            sensor-bindings = <&ROTATE SCRL_UP SCRL_DOWN>;
         };
 
         JIS_NUMBER {
             bindings = <
-&kp LEFT  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RIGHT                                   &kp SEMICOLON         &kp LS(SEMI)           &none  &none  &kp ESCAPE
+&kp LEFT  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RIGHT                                   &kp SEMICOLON         &kp SINGLE_QUOTE       &none  &none  &kp ESCAPE
 &kp LEFT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RIGHT  &bt BT_SEL 0      &kp DELETE     &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &none  &none  &none
 &kp LEFT  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT  &kp DOWN          &kp BACKSPACE  &kp LS(NUMBER_8)      &kp LS(NUMBER_9)       &none  &none  &duplicate_tab
 &kp DOWN  &kp NUMBER_0  &kt DOT       &kp F2        &kp SPACE  &kp F4            &kp KP_ENTER   &kp LS(EQUAL)                                              &none
             >;
+
+            sensor-bindings = <&ROTATE SCRL_LEFT SCRL_RIGHT>;
         };
 
         ASC_NUMBER {
             bindings = <
-&none  &none             &none              &none         &kp LS(MINUS)                                       &kp SLASH        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(MINUS)
-&none  &kp PLUS          &kp MINUS          &kp ASTERISK  &kp SLASH      &bt BT_SEL 1          &kp DELETE     &kp ASTERISK     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PERCENT
-&none  &kp LG(LS(LEFT))  &kp LS(LG(RIGHT))  &kp LG(INT3)  &kp LS(N4)     &kp K_CALCULATOR      &kp BACKSPACE  &kp DOT          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp MINUS
-&none  &kt LG(LS(S))     &kp LG(D)          &kp LEFT      &kp SPACE      &kp RIGHT             &kp ENTER      &kp KP_NUMBER_0                                                     &kp SEMICOLON
+&none  &none              &none              &none         &kp LS(MINUS)                                       &kp SLASH        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(MINUS)
+&none  &kp LS(SEMICOLON)  &kp MINUS          &kp ASTERISK  &kp SLASH      &bt BT_SEL 1          &kp DELETE     &kp ASTERISK     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PERCENT
+&none  &kp LG(LS(LEFT))   &kp LS(LG(RIGHT))  &kp LG(INT3)  &kp LS(N4)     &kp K_CALCULATOR      &kp BACKSPACE  &kp DOT          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp MINUS
+&none  &kt LG(LS(S))      &kp LG(D)          &kp LEFT      &kp SPACE      &kp RIGHT             &kp ENTER      &kp KP_NUMBER_0                                                     &kp SEMICOLON
             >;
         };
 
