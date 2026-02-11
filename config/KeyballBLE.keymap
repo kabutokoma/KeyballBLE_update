@@ -89,10 +89,10 @@
 
         JIS_NUMBER {
             bindings = <
-&kp LEFT  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RIGHT                                   &kp SEMICOLON         &kp SINGLE_QUOTE       &none  &none  &kp ESCAPE
-&kp LEFT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RIGHT  &bt BT_SEL 0      &kp DELETE     &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &none  &none  &none
-&kp LEFT  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT  &kp DOWN          &kp BACKSPACE  &kp LS(NUMBER_8)      &kp LS(NUMBER_9)       &none  &none  &duplicate_tab
-&kp DOWN  &kp NUMBER_0  &kt DOT       &kp F2        &kp SPACE  &kp F4            &kp KP_ENTER   &kp LS(EQUAL)                                              &none
+&kp LEFT  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RIGHT                                   &kp SEMICOLON          &kp SINGLE_QUOTE   &none  &none  &kp ESCAPE
+&kp LEFT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RIGHT  &bt BT_SEL 0      &kp DELETE     &kp LS(RIGHT_BRACKET)  &kp RIGHT_BRACKET  &none  &none  &none
+&kp LEFT  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT  &kp DOWN          &kp BACKSPACE  &kp LS(NUMBER_8)       &kp LS(NUMBER_9)   &none  &none  &duplicate_tab
+&kp DOWN  &kp NUMBER_0  &kt DOT       &kp F2        &kp SPACE  &kp F4            &kp KP_ENTER   &kp LS(EQUAL)                                           &none
             >;
 
             sensor-bindings = <&ROTATE SCRL_LEFT SCRL_RIGHT>;
