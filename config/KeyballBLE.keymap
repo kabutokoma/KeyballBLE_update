@@ -108,7 +108,7 @@
             >;
         };
 
-        T-Scroll {
+        T_Scroll {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
