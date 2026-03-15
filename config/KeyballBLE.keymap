@@ -33,17 +33,14 @@
         duplicate_tab: duplicate_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp L>,
-                <&macro_release>,
-                <&kp LCTRL &kp L>,
-                <&macro_pause_for_release>,
-                <&macro_press>,
-                <&kp LALT &kp ENTER>,
-                <&macro_release>,
-                <&kp LALT &kp ENTER>;
-
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp L>
+                , <&macro_release &kp LCTRL>
+                , <&macro_pause_for_release>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp ENTER>
+                , <&macro_release &kp LALT>;
             label = "DUPLICATE_TAB";
         };
     };
