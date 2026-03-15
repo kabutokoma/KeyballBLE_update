@@ -59,7 +59,7 @@
         L-JISnum {
             bindings = <
 &none  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                                   &kp ESC   &kp UP     &kp TAB    &none      &none
-&none  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none         &bt BT_SEL 1      &kp DELETE     &kp LEFT  &kp DOWN   &kp RIGHT  &none      &none
+&none  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none         &bt BT_SEL 0      &kp DELETE     &kp LEFT  &kp DOWN   &kp RIGHT  &none      &none
 &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none         &none             &kp BACKSPACE  &kp PLUS  &kp MINUS  &kp COLON  &kp SLASH  &none
 &none  &none         &none         &kp F9        &kp SPACE     &kp F10           &kp LSHFT      &none                                      &kp LS(MINUS)
             >;
@@ -69,14 +69,14 @@
 
         R-ASCnum {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                    &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp KP_NUMBER_0  &kp KP_NUMBER_4   &kp KP_NUMBER_5    &kp HASH        &kp DOLLAR            &kp PERCENT
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &kp DOT          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans           &trans                                                                     &kp PIPE
+&none   &none            &none            &none                &none                                                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &none
+&none   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6      &none      &bt BT_SEL 1                &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none  &none
+&none   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3      &kp F9     &kp F10                     &kp DOT          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &none
+&trans  &none            &trans           &mt LESS_THAN SLASH  &kp EQUAL  &mt GREATER_THAN COLON      &kp PLUS         &kp MINUS                                                 &none
             >;
         };
 
-        ARROW {
+        Function {
             bindings = <
 &kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
 &kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
