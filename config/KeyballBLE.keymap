@@ -29,6 +29,23 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        duplicate_tab: duplicate_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp L>,
+                <&macro_release>,
+                <&kp LCTRL &kp L>,
+                <&macro_pause_for_release>,
+                <&macro_press>,
+                <&kp LALT &kp ENTER>,
+                <&macro_release>,
+                <&kp LALT &kp ENTER>;
+
+            label = "DUPLICATE_TAB";
+        };
     };
 
     behaviors {
@@ -78,10 +95,10 @@
 
         Function {
             bindings = <
-&none  &none  &none  &none   &none                             &trans         &trans  &trans  &trans  &trans
-&none  &none  &none  &none   &none   &none       &kp LG(UP)    &trans         &trans  &trans  &trans  &trans
-&none  &none  &none  &none   &none   &none       &kp LG(DOWN)  &trans         &trans  &trans  &trans  &kp LG(RS(RIGHT))
-&none  &none  &none  &trans  &trans  &trans      &kp LG(LEFT)  &kp LG(RIGHT)                          &kp LG(RS(LEFT))
+&none  &none  &none  &none      &none                                            &none           &none     &none              &kp F9           &kp F10
+&none  &none  &none  &none      &none          &none               &kp LG(UP)    &kp LEFT_BRACE  &kp LBKT  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp PIPE
+&none  &none  &none  &none      &kp LG(LS(S))  &none               &kp LG(DOWN)  &kp F1          &kp F2    &kp F3             &kp F4           &kp LG(RS(RIGHT))
+&none  &none  &none  &kp LC(W)  &none          &duplicate_tab      &kp LG(LEFT)  &kp LG(RIGHT)                                                 &kp LG(RS(LEFT))
             >;
         };
 
