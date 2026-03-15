@@ -69,19 +69,19 @@
 
         R-ASCnum {
             bindings = <
-&none    &none  &none       &none                &none                                                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &none
-&none    &none  &none       &none                &none      &bt BT_SEL 1                &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none  &none
-&none    &none  &none       &none                &kp F9     &kp F10                     &kp DOT          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &none
+&none    &none  &none       &none                &none                                                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &kp LG(INT3)
+&none    &none  &none       &none                &none      &bt BT_SEL 1                &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none  &kp LS(NUMBER_4)
+&none    &none  &none       &none                &kp F9     &kp F10                     &kp DOT          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &kp LS(NUMBER_5)
 &kp TAB  &none  &kp K_CALC  &mt LESS_THAN SLASH  &kp EQUAL  &mt GREATER_THAN COLON      &kp PLUS         &kp MINUS                                                 &kp ESC
             >;
         };
 
         Function {
             bindings = <
-&none  &none  &none  &none   &none                       &trans  &trans  &trans  &trans  &trans
-&none  &none  &none  &none   &none   &none       &trans  &trans  &trans  &trans  &trans  &trans
-&none  &none  &none  &none   &none   &none       &trans  &trans  &trans  &trans  &trans  &trans
-&none  &none  &none  &trans  &trans  &trans      &trans  &trans                          &trans
+&none  &none  &none  &none   &none                             &trans         &trans  &trans  &trans  &trans
+&none  &none  &none  &none   &none   &none       &kp LG(UP)    &trans         &trans  &trans  &trans  &trans
+&none  &none  &none  &none   &none   &none       &kp LG(DOWN)  &trans         &trans  &trans  &trans  &kp LG(RS(RIGHT))
+&none  &none  &none  &trans  &trans  &trans      &kp LG(LEFT)  &kp LG(RIGHT)                          &kp LG(RS(LEFT))
             >;
         };
 
