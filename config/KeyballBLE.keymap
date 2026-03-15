@@ -33,14 +33,21 @@
         duplicate_tab: duplicate_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp L>
-                , <&macro_release &kp LCTRL>
-                , <&macro_pause_for_release>
-                , <&macro_press &kp LALT>
-                , <&macro_tap &kp ENTER>
-                , <&macro_release &kp LALT>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp L>,
+                <&macro_release>,
+                <&kp LCTRL>,
+                <&macro_pause_for_release>,
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp ENTER>,
+                <&macro_release>,
+                <&kp LALT>;
+
             label = "DUPLICATE_TAB";
         };
     };
@@ -72,10 +79,10 @@
 
         L_JISnum {
             bindings = <
-&none  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                                   &kp ESC   &kp UP     &kp TAB    &none      &none
-&none  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none         &bt BT_SEL 0      &kp DELETE     &kp LEFT  &kp DOWN   &kp RIGHT  &none      &none
-&none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none         &none             &kp BACKSPACE  &kp PLUS  &kp MINUS  &kp COLON  &kp SLASH  &none
-&none  &none         &none         &kp F9        &kp SPACE     &kp F10           &kp LSHFT      &none                                      &kp LS(MINUS)
+&none  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                                   &kp ESC       &kp UP     &kp TAB    &none      &none
+&none  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none         &bt BT_SEL 0      &kp DELETE     &kp LEFT      &kp DOWN   &kp RIGHT  &none      &none
+&none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none         &none             &kp BACKSPACE  &kp LS(SEMI)  &kp MINUS  &kp COLON  &kp SLASH  &none
+&none  &none         &none         &kp F9        &kp SPACE     &kp F10           &kp LSHFT      &none                                          &kp LS(MINUS)
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
