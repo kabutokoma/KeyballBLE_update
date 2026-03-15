@@ -14,20 +14,10 @@
             ;
 };
 / {
-    cursor_scaler: cursor_scaler {
-        compatible = "zmk,input-processor-scaler";
-        #input-processor-cells = <2>;
-        type = <INPUT_EV_REL>;
-        codes = <INPUT_REL_X>, <INPUT_REL_Y>;
-        track-remainders;
-        multiplier = <3>;
-        divisor = <2>;
-    };
-
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        input-processors = <&cursor_scaler 3 2>;
+        input-processors = <&zip_xy_scaler 3 2>;
 
         scroller {
             layers = <5>;
