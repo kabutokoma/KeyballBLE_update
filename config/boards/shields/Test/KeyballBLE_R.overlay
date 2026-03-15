@@ -16,7 +16,7 @@
 / {
     cursor_scaler: cursor_scaler {
         compatible = "zmk,input-processor-scaler";
-        #input-processor-cells = <0>;
+        #input-processor-cells = <2>;
         type = <INPUT_EV_REL>;
         codes = <INPUT_REL_X>, <INPUT_REL_Y>;
         track-remainders;
@@ -27,7 +27,7 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        input-processors = <&cursor_scaler>;
+        input-processors = <&cursor_scaler 3 2>;
 
         scroller {
             layers = <5>;
