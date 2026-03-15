@@ -95,10 +95,10 @@
 
         Function {
             bindings = <
-&none  &none  &none  &none      &none                                            &none           &none     &none              &kp F9           &kp F10
-&none  &none  &none  &none      &none          &none               &kp LG(UP)    &kp LEFT_BRACE  &kp LBKT  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp PIPE
-&none  &none  &none  &none      &kp LG(LS(S))  &none               &kp LG(DOWN)  &kp F1          &kp F2    &kp F3             &kp F4           &kp LG(RS(RIGHT))
-&none  &none  &none  &kp LC(W)  &none          &duplicate_tab      &kp LG(LEFT)  &kp LG(RIGHT)                                                 &kp LG(RS(LEFT))
+&none  &none  &none  &none      &none                                            &kp SEMI          &kp COLON     &kp LBKT               &kp F9            &kp F10
+&none  &none  &none  &none      &none          &none               &kp LG(UP)    &kp LS(NUMBER_8)  &kp LS(LBKT)  &kp LS(RIGHT_BRACKET)  &kp LS(NUMBER_9)  &kp PIPE
+&none  &none  &none  &none      &kp LG(LS(S))  &none               &kp LG(DOWN)  &kp F1            &kp F2        &kp F3                 &kp F4            &kp LG(RS(RIGHT))
+&none  &none  &none  &kp LC(W)  &none          &duplicate_tab      &kp LG(LEFT)  &kp LG(RIGHT)                                                            &kp LG(RS(LEFT))
             >;
         };
 
