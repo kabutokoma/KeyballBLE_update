@@ -74,7 +74,7 @@
 &mt LCTRL EXCLAMATION  &lt 2 END  &kp LEFT_SHIFT  &mkp RCLK  &kp SPACE  &mkp LCLK        &kp ENTER      &lt 1 ESC                                                       &mt LEFT_ALT TAB
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
 
         L_JISnum {
