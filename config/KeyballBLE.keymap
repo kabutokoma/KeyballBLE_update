@@ -101,7 +101,7 @@
 
         Function {
             bindings = <
-&none  &none  &none  &none      &none                                            &kp SEMI          &kp SEMI          &none   &kp F9  &kp F10
+&none  &none  &none  &none      &none                                            &kp SEMI          &kp SINGLE_QUOTE  &none   &kp F9  &kp F10
 &none  &none  &none  &none      &none          &duplicate_tab      &kp LG(UP)    &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &none   &none   &none
 &none  &none  &none  &none      &kp LG(LS(S))  &none               &kp LG(DOWN)  &kp F1            &kp F2            &kp F3  &kp F4  &kp LG(LS(RIGHT))
 &none  &none  &none  &kp LC(W)  &none          &kp LBKT            &kp LG(LEFT)  &kp LG(RIGHT)                                       &kp LG(LS(LEFT))
