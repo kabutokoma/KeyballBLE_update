@@ -1,8 +1,8 @@
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 50
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 50
 #include <dt-bindings/zmk/pointing.h>
 
 #define MOUSE 4
@@ -55,6 +55,7 @@
                 <&kp ENTER>,
                 <&macro_release>,
                 <&kp LALT>;
+
             label = "DUPLICATE_TAB";
         };
     };
@@ -64,6 +65,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
@@ -86,7 +88,7 @@
 &mt LCTRL EXCLAMATION  &lt 2 END    &kp LEFT_SHIFT  &mkp RCLK    &kp SPACE    &mkp LCLK        &mt RCTRL ENTER      &lt 1 ESC                                                               &mt LEFT_ALT TAB
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
         };
 
         L_JISnum {
@@ -96,6 +98,7 @@
 &none          &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_SHIFT      &kp BACKSPACE  &kp LS(SEMI)  &kp MINUS  &kp LS(SINGLE_QUOTE)  &kp SLASH  &none
 &kp LG(LS(S))  &none  &kp NUMBER_0  &kp F9        &kp SPACE     &kp F10             &kp LSHFT      &none                                                     &kp LS(MINUS)
             >;
+
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
         };
 
@@ -106,6 +109,7 @@
 &none    &none  &none       &none                &kp F9         &kp F10                     &kp DOT            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &kp LS(NUMBER_5)
 &kp TAB  &none  &kp K_CALC  &mt LESS_THAN SLASH  &kp LS(MINUS)  &mt GREATER_THAN COLON      &kp LS(SEMICOLON)  &kp MINUS                                                 &kp LG(D)
             >;
+
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
