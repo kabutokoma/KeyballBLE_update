@@ -2,23 +2,224 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KeyballBLE.keymap</title>
 <style>
-  body { background: #1e1e2e; color: #cdd6f4; font-family: 'Consolas', monospace; margin: 0; padding: 16px; }
-  h2 { color: #89b4fa; font-size: 15px; margin-bottom: 6px; }
-  .desc { color: #a6adc8; font-size: 12px; margin-bottom: 10px; }
-  .tag { display: inline-block; background: #a6e3a1; color: #1e1e2e; font-size: 11px; font-weight: bold; border-radius: 4px; padding: 2px 8px; margin-left: 8px; }
-  textarea { width: 100%; height: 82vh; background: #181825; color: #cdd6f4; border: 1px solid #313244; border-radius: 8px; padding: 14px; font-family: 'Consolas', monospace; font-size: 12.5px; line-height: 1.6; resize: none; box-sizing: border-box; }
-  button { background: #89b4fa; color: #1e1e2e; border: none; border-radius: 6px; padding: 8px 20px; font-size: 13px; font-weight: bold; cursor: pointer; margin-bottom: 10px; }
-  button:hover { background: #74c7ec; }
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0f0f17;
+    --surface: #161622;
+    --surface2: #1c1c2e;
+    --border: #2a2a40;
+    --text: #c8cad8;
+    --text-dim: #6b6d80;
+    --accent: #6ee7b7;
+    --accent2: #60a5fa;
+    --accent3: #f9a8d4;
+    --keyword: #c084fc;
+    --string: #fbbf24;
+    --comment: #4b5563;
+    --include: #60a5fa;
+    --define: #f472b6;
+    --amp: #6ee7b7;
+    --angle: #fbbf24;
+    --number: #f97316;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans JP', sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .title-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  h1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--accent2);
+    letter-spacing: -0.5px;
+  }
+
+  .badge {
+    background: var(--accent);
+    color: var(--bg);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+  }
+
+  .desc {
+    color: var(--text-dim);
+    font-size: 13px;
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+
+  .actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  button {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  button:hover {
+    background: var(--accent2);
+    color: var(--bg);
+    border-color: var(--accent2);
+  }
+
+  button.copied {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+  }
+
+  .code-wrapper {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .code-header {
+    background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-r { background: #ef4444; }
+  .dot-y { background: #eab308; }
+  .dot-g { background: #22c55e; }
+
+  .code-scroll {
+    overflow: auto;
+    max-height: 72vh;
+    padding: 16px 0;
+  }
+
+  .code-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
+  .code-scroll::-webkit-scrollbar-track { background: transparent; }
+  .code-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  pre {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    line-height: 1.7;
+    margin: 0;
+    counter-reset: line;
+  }
+
+  .line {
+    display: block;
+    padding: 0 20px 0 0;
+    min-height: 1.7em;
+    white-space: pre;
+  }
+
+  .line::before {
+    counter-increment: line;
+    content: counter(line);
+    display: inline-block;
+    width: 40px;
+    text-align: right;
+    margin-right: 20px;
+    color: var(--text-dim);
+    opacity: 0.4;
+    font-size: 11px;
+    user-select: none;
+  }
+
+  .line:hover { background: rgba(96, 165, 250, 0.05); }
+
+  .kw { color: var(--keyword); }
+  .inc { color: var(--include); }
+  .def { color: var(--define); }
+  .amp { color: var(--amp); font-weight: 600; }
+  .str { color: var(--string); }
+  .cmt { color: var(--comment); font-style: italic; }
+  .num { color: var(--number); }
+  .prop { color: #93c5fd; }
+  .tag { color: #a78bfa; }
 </style>
 </head>
 <body>
-<h2>KeyballBLE.keymap <span class="tag">修正済み</span></h2>
-<p class="desc">テキストエリアを全選択（Ctrl+A）してコピー、またはボタンを使用してください。</p>
-<button onclick="copyAll()">📋 全文コピー</button>
-<textarea id="code" readonly>
-#include <behaviors.dtsi>
+
+<div class="container">
+  <header>
+    <div class="title-group">
+      <h1>KeyballBLE.keymap</h1>
+      <span class="badge">修正済み</span>
+    </div>
+    <div class="actions">
+      <button id="copyBtn" onclick="copyCode()">📋 全文コピー</button>
+      <button onclick="downloadFile()">💾 ダウンロード</button>
+    </div>
+  </header>
+  <p class="desc">HTMLラッパーを除去した正しい .keymap ファイルです。<br>「全文コピー」でクリップボードにコピーし、リポジトリの <code style="color:var(--accent2)">config/KeyballBLE.keymap</code> を置き換えてください。</p>
+
+  <div class="code-wrapper">
+    <div class="code-header">
+      <span class="dot dot-r"></span>
+      <span class="dot dot-y"></span>
+      <span class="dot dot-g"></span>
+      <span style="margin-left:8px">KeyballBLE.keymap</span>
+    </div>
+    <div class="code-scroll">
+      <pre id="codeDisplay"></pre>
+    </div>
+  </div>
+</div>
+
+<script>
+const RAW_CODE = `#include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -148,18 +349,58 @@
             >;
         };
     };
-};
-</textarea>
-<script>
-function copyAll() {
-  const ta = document.getElementById('code');
-  ta.select();
-  navigator.clipboard.writeText(ta.value.trim()).then(() => {
-    const btn = document.querySelector('button');
+};`;
+
+function highlight(line) {
+  // Escape HTML
+  let s = line.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+  // #include
+  s = s.replace(/^(#include)\s+(&lt;.*?&gt;)/, '<span class="inc">$1</span> <span class="str">$2</span>');
+  // #define
+  s = s.replace(/^(#define)\s+(\w+)\s+(\d+)/, '<span class="def">$1</span> <span class="tag">$2</span> <span class="num">$3</span>');
+  // strings
+  s = s.replace(/"([^"]*)"/g, '<span class="str">"$1"</span>');
+  // &references
+  s = s.replace(/&amp;(\w[\w_]*)/g, '<span class="amp">&amp;$1</span>');
+  // properties (word followed by = or ;)
+  s = s.replace(/^(\s+)([\w-]+)(\s*=)/gm, '$1<span class="prop">$2</span>$3');
+  // numbers
+  s = s.replace(/\b(\d+)\b/g, '<span class="num">$1</span>');
+  // keywords
+  s = s.replace(/\b(compatible|bindings|key-positions|label|flavor|tapping-term-ms|quick-tap-ms|sensor-bindings)\b/g, '<span class="kw">$1</span>');
+
+  return s;
+}
+
+function render() {
+  const pre = document.getElementById('codeDisplay');
+  const lines = RAW_CODE.split('\n');
+  pre.innerHTML = lines.map(l => `<span class="line">${highlight(l)}</span>`).join('\n');
+}
+
+function copyCode() {
+  navigator.clipboard.writeText(RAW_CODE).then(() => {
+    const btn = document.getElementById('copyBtn');
+    btn.classList.add('copied');
     btn.textContent = '✅ コピーしました！';
-    setTimeout(() => btn.textContent = '📋 全文コピー', 2000);
+    setTimeout(() => {
+      btn.classList.remove('copied');
+      btn.textContent = '📋 全文コピー';
+    }, 2500);
   });
 }
+
+function downloadFile() {
+  const blob = new Blob([RAW_CODE], { type: 'text/plain' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'KeyballBLE.keymap';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+render();
 </script>
 </body>
 </html>
