@@ -1,69 +1,165 @@
-0s
-1s
-3s
-Run west build -s zmk/app -d "/tmp/tmp.9kDceiovHW" -b "xiao_ble//zmk"  -- -DZMK_CONFIG=/tmp/zmk-config/config -DSHIELD="KeyballBLE_L" -DZMK_EXTRA_MODULES='/__w/KeyballBLE_update/KeyballBLE_update' 
-+ west build -s zmk/app -d /tmp/tmp.9kDceiovHW -b xiao_ble//zmk -- -DZMK_CONFIG=/tmp/zmk-config/config -DSHIELD=KeyballBLE_L -DZMK_EXTRA_MODULES=/__w/KeyballBLE_update/KeyballBLE_update
--- west build: generating a build system
-Loading Zephyr default modules (Zephyr base).
--- Application: /tmp/zmk-config/zmk/app
--- CMake version: 3.31.6
--- Found Python3: /usr/bin/python3 (found suitable version "3.12.3", minimum required is "3.10") found components: Interpreter
--- Cache files will be written to: /tmp/zmk-config/zephyr/.cache
--- Zephyr version: 4.1.0 (/tmp/zmk-config/zephyr)
--- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
-CMake Deprecation Warning at keymap-module/modules/modules.cmake:53 (message):
--- Adding ZMK config directory as board root: /tmp/zmk-config/config
-  The `config/boards` folder is deprecated.  Please use a module instead.
-  See https://zmk.dev/docs/development/hardware-integration/new-shield and
-  https://zmk.dev/docs/development/module-creation for more information.
-Call Stack (most recent call first):
-  /tmp/zmk-config/zephyr/cmake/modules/zephyr_module.cmake:126 (include)
-  /tmp/zmk-config/zephyr/cmake/modules/zephyr_default.cmake:134 (include)
-  /tmp/zmk-config/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)
-  /tmp/zmk-config/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)
-  CMakeLists.txt:9 (find_package)
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>KeyballBLE.keymap</title>
+<style>
+  body { background: #1e1e2e; color: #cdd6f4; font-family: 'Consolas', monospace; margin: 0; padding: 16px; }
+  h2 { color: #89b4fa; font-size: 15px; margin-bottom: 6px; }
+  .desc { color: #a6adc8; font-size: 12px; margin-bottom: 10px; }
+  .tag { display: inline-block; background: #a6e3a1; color: #1e1e2e; font-size: 11px; font-weight: bold; border-radius: 4px; padding: 2px 8px; margin-left: 8px; }
+  textarea { width: 100%; height: 82vh; background: #181825; color: #cdd6f4; border: 1px solid #313244; border-radius: 8px; padding: 14px; font-family: 'Consolas', monospace; font-size: 12.5px; line-height: 1.6; resize: none; box-sizing: border-box; }
+  button { background: #89b4fa; color: #1e1e2e; border: none; border-radius: 6px; padding: 8px 20px; font-size: 13px; font-weight: bold; cursor: pointer; margin-bottom: 10px; }
+  button:hover { background: #74c7ec; }
+</style>
+</head>
+<body>
+<h2>KeyballBLE.keymap <span class="tag">修正済み</span></h2>
+<p class="desc">テキストエリアを全選択（Ctrl+A）してコピー、またはボタンを使用してください。</p>
+<button onclick="copyAll()">📋 全文コピー</button>
+<textarea id="code" readonly>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
+#define MOUSE 4
+#define SCROLL 5
+#define NUM 6
 
--- Board: xiao_ble, qualifiers: nrf52840/zmk
--- Shield(s): KeyballBLE_L
-Checking /__w/KeyballBLE_update/KeyballBLE_update/config
-Checking /tmp/zmk-config/zmk/app/module
-Checking /tmp/zmk-config/zmk/app
-found /tmp/zmk-config/zmk/app
--- ZMK Config directory: /tmp/zmk-config/config
-xiao_ble_nrf52840_zmk for _nrf52840_zmk for xiao_ble with version 
--- Using keymap file: /tmp/zmk-config/config/KeyballBLE.keymap
-Checking /tmp/zmk-config/config
-Checking /tmp/zmk-config/zephyr
--- ZEPHYR_TOOLCHAIN_VARIANT not set, trying to locate Zephyr SDK
--- Found host-tools: zephyr 0.16.9 (/opt/zephyr-sdk-0.16.9)
--- Found toolchain: zephyr 0.16.9 (/opt/zephyr-sdk-0.16.9)
--- Found Dtc: /opt/zephyr-sdk-0.16.9/sysroots/x86_64-pokysdk-linux/usr/bin/dtc (found suitable version "1.6.0", minimum required is "1.4.6")
--- Found BOARD.dts: /tmp/zmk-config/zmk/app/boards/seeed/xiao_ble/xiao_ble_zmk.dts
--- Found devicetree overlay: /tmp/zmk-config/config/boards/shields/Test/KeyballBLE_L.overlay
--- Found devicetree overlay: /tmp/zmk-config/config/KeyballBLE.keymap
-devicetree error: /keymap/Keyboard: undefined node label 'inc_dec_msc'
-CMake Error at /tmp/zmk-config/zephyr/cmake/modules/dts.cmake:303 (execute_process):
-  execute_process failed command indexes:
+&mt {
+    flavor = "balanced";
+    quick-tap-ms = <0>;
+};
 
-    1: "Child return code: 1"
+/ {
+    combos {
+        compatible = "zmk,combos";
 
-Call Stack (most recent call first):
-  /tmp/zmk-config/zephyr/cmake/modules/zephyr_default.cmake:134 (include)
-  /tmp/zmk-config/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)
-  /tmp/zmk-config/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)
-  CMakeLists.txt:9 (find_package)
+        double_quotation {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <20 21>;
+        };
+    };
 
+    macros {
+        to_layer_0: to_layer_0 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_LAYER_0";
+        };
 
--- Configuring incomplete, errors occurred!
-FATAL ERROR: command exited with status 1: /usr/local/bin/cmake -DWEST_PYTHON=/usr/bin/python3 -B/tmp/tmp.9kDceiovHW -GNinja -DBOARD=xiao_ble//zmk -DZMK_CONFIG=/tmp/zmk-config/config -DSHIELD=KeyballBLE_L -DZMK_EXTRA_MODULES=/__w/KeyballBLE_update/KeyballBLE_update -S/tmp/zmk-config/zmk/app
-Error: Process completed with exit code 1.
-0s
-2s
-Run if ! (grep "CONFIG_ZMK_BOARD_COMPAT=y" "/tmp/tmp.9kDceiovHW/zephyr/.config" > /dev/null)
-grep: /tmp/tmp.9kDceiovHW/zephyr/.config: No such file or directory
-Error: The selected board is not set up for ZMK and there is a ZMK variant available. See https://zmk.dev/blog/2025/12/09/zephyr-4-1#zmk-board-variant.
-Error: Process completed with exit code 1.
-0s
-0s
-0s
+        duplicate_tab: duplicate_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp L>,
+                <&macro_release>,
+                <&kp LCTRL>,
+                <&macro_pause_for_release>,
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp ENTER>,
+                <&macro_release>,
+                <&kp LALT>;
+            label = "DUPLICATE_TAB";
+        };
+    };
+
+    behaviors {
+        lt_to_layer_0: lt_to_layer_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_TO_0";
+            bindings = <&mo>, <&to_layer_0>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        scroll_encoder: scroll_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        Keyboard {
+            bindings = <
+&mt RCTRL Q            &mt RCTRL W  &mt RCTRL E     &mt RCTRL R  &mt RCTRL T                                        &mt RCTRL Y  &mt RCTRL U  &mt RCTRL I          &mt RCTRL O              &mt LBKT P
+&mt RCTRL A            &mt RCTRL S  &mt RCTRL D     &mt RCTRL F  &mt RCTRL G  &mo 5            &mt RCTRL DEL        &mt RCTRL H  &mt RCTRL J  &mt RCTRL K          &mt RCTRL L              &mt LS(N5) MINUS
+&mt RCTRL Z            &mt RCTRL X  &mt RCTRL C     &mt RCTRL V  &mt RCTRL B  &lt 3 GRAVE      &mt RCTRL BACKSPACE  &mt RCTRL N  &mt RCTRL M  &mt LESS_THAN COMMA  &mt GREATER_THAN PERIOD  &mt LS(QUESTION) SLASH
+&mt LCTRL EXCLAMATION  &lt 2 END    &kp LEFT_SHIFT  &mkp RCLK    &kp SPACE    &mkp LCLK        &mt RCTRL ENTER      &lt 1 ESC                                                               &mt LEFT_ALT TAB
+            >;
+
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        L_JISnum {
+            bindings = <
+&kp LG(D)      &none  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                                     &kp LC(HOME)  &kp UP     &kp LC(END)           &none      &kp INTERNATIONAL_1
+&none          &none  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &bt BT_SEL 0        &kp DELETE     &kp LEFT      &kp DOWN   &kp RIGHT             &none      &none
+&none          &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_SHIFT      &kp BACKSPACE  &kp LS(SEMI)  &kp MINUS  &kp LS(SINGLE_QUOTE)  &kp SLASH  &none
+&kp LG(LS(S))  &none  &kp NUMBER_0  &kp F9        &kp SPACE     &kp F10             &kp LSHFT      &none                                                     &kp LS(MINUS)
+            >;
+            sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
+        };
+
+        R_ASCnum {
+            bindings = <
+&none    &none  &none       &none                &none                                                         &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &kp LG(INT3)
+&none    &none  &none       &none                &none          &bt BT_SEL 1                &kp KP_NUMBER_0    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none  &kp LS(NUMBER_4)
+&none    &none  &none       &none                &kp F9         &kp F10                     &kp DOT            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &kp LS(NUMBER_5)
+&kp TAB  &none  &kp K_CALC  &mt LESS_THAN SLASH  &kp LS(MINUS)  &mt GREATER_THAN COLON      &kp LS(SEMICOLON)  &kp MINUS                                                 &kp LG(D)
+            >;
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
+        };
+
+        Function {
+            bindings = <
+&none  &none  &none  &none      &none                                            &kp SEMI          &kp SINGLE_QUOTE  &none   &kp F9  &kp F10
+&none  &none  &none  &none      &none          &duplicate_tab      &kp LG(UP)    &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &none   &none   &none
+&none  &none  &none  &none      &kp LG(LS(S))  &none               &kp LG(DOWN)  &kp F1            &kp F2            &kp F3  &kp F4  &kp LG(LS(RIGHT))
+&none  &none  &none  &kp LC(W)  &none          &kp LBKT            &kp LG(LEFT)  &kp LG(RIGHT)                                       &kp LG(LS(LEFT))
+            >;
+        };
+
+        none {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+            >;
+        };
+
+        T_Scroll {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+    };
+};
+</textarea>
+<script>
+function copyAll() {
+  const ta = document.getElementById('code');
+  ta.select();
+  navigator.clipboard.writeText(ta.value.trim()).then(() => {
+    const btn = document.querySelector('button');
+    btn.textContent = '✅ コピーしました！';
+    setTimeout(() => btn.textContent = '📋 全文コピー', 2000);
+  });
+}
+</script>
+</body>
+</html>
