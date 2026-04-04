@@ -68,10 +68,10 @@
 
         Keyboard {
             bindings = <
-&mt RCTRL Q            &mt RCTRL W  &mt RCTRL E     &mt RCTRL R  &mt RCTRL T                                        &kp Y      &kp U  &kp I                &kp O                    &mt LBKT P
-&mt RCTRL A            &mt RCTRL S  &mt RCTRL D     &mt RCTRL F  &mt RCTRL G  &mo 5            &mt RCTRL DEL        &kp H      &kp J  &kp K                &kp L                    &mt LS(N5) MINUS
-&mt RCTRL Z            &mt RCTRL X  &mt RCTRL C     &mt RCTRL V  &mt RCTRL B  &lt 3 GRAVE      &mt RCTRL BACKSPACE  &kp N      &kp M  &mt LESS_THAN COMMA  &mt GREATER_THAN PERIOD  &mt LS(QUESTION) SLASH
-&mt LCTRL EXCLAMATION  &lt 2 END    &kp LEFT_SHIFT  &mkp RCLK    &kp SPACE    &mkp LCLK        &mt RCTRL ENTER      &lt 1 ESC                                                       &mt LEFT_ALT TAB
+&mt RCTRL Q            &mt RCTRL W  &mt RCTRL E     &mt RCTRL R  &mt RCTRL T                                        &mt RCTRL Y  &mt RCTRL U  &mt RCTRL I          &mt RCTRL O              &mt LBKT P
+&mt RCTRL A            &mt RCTRL S  &mt RCTRL D     &mt RCTRL F  &mt RCTRL G  &mo 5            &mt RCTRL DEL        &mt RCTRL H  &mt RCTRL J  &mt RCTRL K          &mt RCTRL L              &mt LS(N5) MINUS
+&mt RCTRL Z            &mt RCTRL X  &mt RCTRL C     &mt RCTRL V  &mt RCTRL B  &lt 3 GRAVE      &mt RCTRL BACKSPACE  &mt RCTRL N  &mt RCTRL M  &mt LESS_THAN COMMA  &mt GREATER_THAN PERIOD  &mt LS(QUESTION) SLASH
+&mt LCTRL EXCLAMATION  &lt 2 END    &kp LEFT_SHIFT  &mkp RCLK    &kp SPACE    &mkp LCLK        &mt RCTRL ENTER      &lt 1 ESC                                                               &mt LEFT_ALT TAB
             >;
 
             sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
