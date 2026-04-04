@@ -68,10 +68,10 @@
 
         Keyboard {
             bindings = <
-&kp Q                  &kp W      &kp E           &kp R      &kp T                                      &kp Y      &kp U  &kp I                &kp O                    &mt LBKT P
-&kp A                  &kp S      &kp D           &kp F      &kp G      &mo 5            &kp DEL        &kp H      &kp J  &kp K                &kp L                    &mt LS(N5) MINUS
-&kp Z                  &kp X      &kp C           &kp V      &kp B      &lt 3 GRAVE      &kp BACKSPACE  &kp N      &kp M  &mt LESS_THAN COMMA  &mt GREATER_THAN PERIOD  &mt LS(QUESTION) SLASH
-&mt LCTRL EXCLAMATION  &lt 2 END  &kp LEFT_SHIFT  &mkp RCLK  &kp SPACE  &mkp LCLK        &kp ENTER      &lt 1 ESC                                                       &mt LEFT_ALT TAB
+&mt RCTRL Q            &mt RCTRL W  &kp E           &kp R      &kp T                                      &kp Y      &kp U  &kp I                &kp O                    &mt LBKT P
+&kp A                  &kp S        &kp D           &kp F      &kp G      &mo 5            &kp DEL        &kp H      &kp J  &kp K                &kp L                    &mt LS(N5) MINUS
+&kp Z                  &kp X        &kp C           &kp V      &kp B      &lt 3 GRAVE      &kp BACKSPACE  &kp N      &kp M  &mt LESS_THAN COMMA  &mt GREATER_THAN PERIOD  &mt LS(QUESTION) SLASH
+&mt LCTRL EXCLAMATION  &lt 2 END    &kp LEFT_SHIFT  &mkp RCLK  &kp SPACE  &mkp LCLK        &kp ENTER      &lt 1 ESC                                                       &mt LEFT_ALT TAB
             >;
 
             sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
