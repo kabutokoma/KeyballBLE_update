@@ -88,7 +88,7 @@
 &mt LCTRL EXCLAMATION  &lt 2 END    &kp LEFT_SHIFT  &mkp RCLK    &kp SPACE    &mkp LCLK        &mt RCTRL ENTER      &lt 1 ESC                                                               &mt LEFT_ALT TAB
             >;
 
-            sensor-bindings = <&inc_dec_kp DOWN UP_ARROW>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         L_JISnum {
