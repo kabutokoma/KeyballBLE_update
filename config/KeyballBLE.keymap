@@ -120,6 +120,8 @@
 &none  &none  &none  &none      &kp LG(LS(S))  &none               &kp LG(DOWN)  &kp F1            &kp F2            &kp F3  &kp F4  &kp LG(LS(RIGHT))
 &none  &none  &none  &kp LC(W)  &none          &kp LBKT            &kp LG(LEFT)  &kp LG(RIGHT)                                       &kp LG(LS(LEFT))
             >;
+
+            sensor-bindings = <&scroll_encoder>;
         };
 
         none {
@@ -129,6 +131,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
+
+            sensor-bindings = <&scroll_encoder>;
         };
 
         T_Scroll {
@@ -138,6 +142,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
+
+            sensor-bindings = <&scroll_encoder>;
         };
     };
 };
