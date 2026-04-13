@@ -55,6 +55,7 @@
                 <&kp ENTER>,
                 <&macro_release>,
                 <&kp LALT>;
+
             label = "DUPLICATE_TAB";
         };
     };
@@ -64,6 +65,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
@@ -72,6 +74,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <100>;
         };
     };
@@ -97,16 +100,18 @@
 &none          &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_SHIFT      &kp BACKSPACE  &kp LS(SEMI)  &kp MINUS  &kp LS(SINGLE_QUOTE)  &kp SLASH  &none
 &kp LG(LS(S))  &none  &kp NUMBER_0  &kp F9        &kp SPACE     &kp F10             &kp LSHFT      &none                                                     &kp LS(MINUS)
             >;
+
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
         };
 
         R_ASCnum {
             bindings = <
-&none    &none  &none       &none                &none                                                         &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &kp LG(INT3)
-&none    &none  &none       &none                &none          &bt BT_SEL 1                &kp KP_NUMBER_0    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none  &kp LS(NUMBER_4)
-&none    &none  &none       &none                &kp F9         &kp F10                     &kp DOT            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &kp LS(NUMBER_5)
-&kp TAB  &none  &kp K_CALC  &mt LESS_THAN SLASH  &kp LS(MINUS)  &mt GREATER_THAN COLON      &kp LS(SEMICOLON)  &kp MINUS                                                 &kp LG(D)
+&none    &none  &none          &none                &none                                                         &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &kp LG(INT3)
+&none    &none  &none          &none                &none          &bt BT_SEL 1                &kp KP_NUMBER_0    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none  &kp LS(NUMBER_4)
+&none    &none  &none          &none                &kp F9         &kp F10                     &kp DOT            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &kp LS(NUMBER_5)
+&kp TAB  &none  &kp C_AL_CALC  &mt LESS_THAN SLASH  &kp LS(MINUS)  &mt GREATER_THAN COLON      &kp LS(SEMICOLON)  &kp MINUS                                                 &kp LG(D)
             >;
+
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
@@ -117,6 +122,7 @@
 &none  &none  &none  &none      &kp LG(LS(S))  &none               &kp LG(DOWN)  &kp F1            &kp F2            &kp F3  &kp F4  &kp LG(LS(RIGHT))
 &none  &none  &none  &kp LC(W)  &none          &kp LBKT            &kp LG(LEFT)  &kp LG(RIGHT)                                       &kp LG(LS(LEFT))
             >;
+
             sensor-bindings = <&scroll_encoder>;
         };
 
@@ -127,6 +133,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
+
             sensor-bindings = <&scroll_encoder>;
         };
 
@@ -137,6 +144,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
+
             sensor-bindings = <&scroll_encoder>;
         };
     };
