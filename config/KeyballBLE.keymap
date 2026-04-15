@@ -84,10 +84,10 @@
 
         Keyboard {
             bindings = <
-&mt RCTRL Q            &mt RCTRL W  &mt RCTRL E     &mt RCTRL R  &mt RCTRL T                                        &mt RCTRL Y  &mt RCTRL U  &mt RCTRL I          &mt RCTRL O              &mt LBKT P
-&mt RCTRL A            &mt RCTRL S  &mt RCTRL D     &mt RCTRL F  &mt RCTRL G  &mo 5            &mt RCTRL DEL        &mt RCTRL H  &mt RCTRL J  &mt RCTRL K          &mt RCTRL L              &mt LS(N5) MINUS
-&mt RCTRL Z            &mt RCTRL X  &mt RCTRL C     &mt RCTRL V  &mt RCTRL B  &lt 3 GRAVE      &mt RCTRL BACKSPACE  &mt RCTRL N  &mt RCTRL M  &mt LESS_THAN COMMA  &mt GREATER_THAN PERIOD  &mt LS(QUESTION) SLASH
-&mt LCTRL EXCLAMATION  &lt 2 END    &kp LEFT_SHIFT  &mkp RCLK    &kp SPACE    &mkp LCLK        &mt RCTRL ENTER      &lt 1 ESC                                                               &mt LEFT_ALT TAB
+&mt RCTRL Q            &mt RCTRL W      &mt RCTRL E     &mt RCTRL R  &mt RCTRL T                                        &mt RCTRL Y  &mt RCTRL U  &mt RCTRL I          &mt RCTRL O              &mt LBKT P
+&mt RCTRL A            &mt RCTRL S      &mt RCTRL D     &mt RCTRL F  &mt RCTRL G  &mo 5            &mt RCTRL DEL        &mt RCTRL H  &mt RCTRL J  &mt RCTRL K          &mt RCTRL L              &mt LS(N5) MINUS
+&mt RCTRL Z            &mt RCTRL X      &mt RCTRL C     &mt RCTRL V  &mt RCTRL B  &lt 3 GRAVE      &mt RCTRL BACKSPACE  &mt RCTRL N  &mt RCTRL M  &mt LESS_THAN COMMA  &mt GREATER_THAN PERIOD  &mt LS(QUESTION) SLASH
+&mt LCTRL EXCLAMATION  &lt 2 LS(LC(V))  &kp LEFT_SHIFT  &mkp RCLK    &kp SPACE    &mkp LCLK        &mt RCTRL ENTER      &lt 1 ESC                                                               &mt LEFT_ALT TAB
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -95,10 +95,10 @@
 
         L_JISnum {
             bindings = <
-&kp LG(D)      &none  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                                     &kp LC(HOME)  &kp UP     &kp LC(END)           &none      &kp INTERNATIONAL_1
-&none          &none  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &bt BT_SEL 0        &kp DELETE     &kp LEFT      &kp DOWN   &kp RIGHT             &none      &none
-&none          &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_SHIFT      &kp BACKSPACE  &kp LS(SEMI)  &kp MINUS  &kp LS(SINGLE_QUOTE)  &kp SLASH  &kp UNDER
-&kp LG(LS(S))  &none  &kp NUMBER_0  &kp F9        &kp SPACE     &kp F10             &kp LSHFT      &none                                                     &kp LS(MINUS)
+&kp LG(D)      &none  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                                &kp LC(HOME)  &kp UP     &kp LC(END)           &none      &kp INTERNATIONAL_1
+&kp LG(G)      &none  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &bt BT_SEL 0        &kp F10  &kp LEFT      &kp DOWN   &kp RIGHT             &none      &none
+&kp LWIN       &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp LEFT_SHIFT      &kp F9   &kp LS(SEMI)  &kp MINUS  &kp LS(SINGLE_QUOTE)  &kp SLASH  &kp UNDER
+&kp LG(LS(S))  &none  &kp NUMBER_0  &kp LCTRL     &kp LS(LCTRL)  &kp LSHFT           &kp TAB  &none                                                     &kp LS(MINUS)
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
