@@ -86,8 +86,8 @@
             bindings = <
 &mt K_CANCEL Q             &mt K_CANCEL W  &mt K_CANCEL E  &mt K_CANCEL R  &mt K_CANCEL T                                           &mt K_CANCEL Y  &mt K_CANCEL U  &mt K_CANCEL I       &mt K_CANCEL O           &mt LBKT P
 &mt K_CANCEL A             &mt K_CANCEL S  &mt K_CANCEL D  &mt K_CANCEL F  &mt K_CANCEL G  &mo 5            &mt K_CANCEL DELETE     &mt K_CANCEL H  &mt K_CANCEL J  &mt K_CANCEL K       &mt K_CANCEL L           &mt LS(N5) MINUS
-&mt K_CANCEL Z             &mt K_CANCEL X  &mt K_CANCEL C  &mt K_CANCEL V  &mt K_CANCEL B  &lt 3 GRAVE      &mt K_CANCEL BACKSPACE  &mt K_CANCEL N  &mt K_CANCEL M  &mt LESS_THAN COMMA  &mt GREATER_THAN PERIOD  &mt LS(QUESTION) SLASH
-&lt 2 LS(LC(EXCLAMATION))  &kp LCTRL       &kp LEFT_SHIFT  &mkp RCLK       &kp SPACE       &mkp LCLK        &mt LS(LC(V)) ENTER     &lt 1 ESC                                                                     &mt LEFT_ALT TAB
+&mt K_CANCEL Z             &mt K_CANCEL X  &mt K_CANCEL C  &mt K_CANCEL V  &mt K_CANCEL B  &lt 3 GRAVE      &mt K_CANCEL BACKSPACE  &mt LS(N) N     &mt LS(M) M     &mt LESS_THAN COMMA  &mt GREATER_THAN PERIOD  &mt LS(QUESTION) SLASH
+&lt 2 LS(LC(EXCLAMATION))  &kp LCTRL       &kp LEFT_SHIFT  &mkp RCLK       &kp SPACE       &mkp LCLK        &mt LA(ENTER) ENTER     &lt 1 ESC                                                                     &mt LS(TAB) TAB
             >;
 
             sensor-bindings = <&scroll_encoder>;
