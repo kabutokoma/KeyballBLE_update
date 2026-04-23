@@ -84,9 +84,9 @@
 
         Keyboard {
             bindings = <
-&mt LS(Q) Q        &mt LS(W) W     &mt LS(E) E                  &mt LS(R) R  &mt LS(T) T                                           &mt LS(Y) Y  &mt LS(U) U  &mt LS(I) I          &mt LS(O) O              &mt LS(P) P
-&mt LS(A) A        &mt LS(S) S     &mt LS(D) D                  &mt LS(F) F  &mt LS(G) G  &mo 5            &mt K_CANCEL DELETE     &mt LS(H) H  &mt LS(J) J  &mt LS(K) K          &mt LS(L) L              &mt LS(N5) MINUS
-&mt LS(Z) Z        &mt LS(X) X     &mt LS(C) C                  &mt LS(V) V  &mt LS(B) B  &lt 3 GRAVE      &mt K_CANCEL BACKSPACE  &mt LS(N) N  &mt LS(M) M  &mt LESS_THAN COMMA  &mt GREATER_THAN PERIOD  &mt LS(QUESTION) SLASH
+&mt LS(Q) Q        &mt LS(W) W     &mt LS(E) E                  &mt LS(R) R  &mt LC(T) T                                           &mt LC(Y) Y  &mt LC(U) U  &mt LC(I) I          &mt LS(O) O              &mt LS(P) P
+&mt LC(A) A        &mt LC(S) S     &mt LS(D) D                  &mt LC(F) F  &mt LS(G) G  &mo 5            &mt K_CANCEL DELETE     &mt LC(H) H  &mt LS(J) J  &mt LS(K) K          &mt LS(L) L              &mt LS(N5) MINUS
+&mt LC(Z) Z        &mt LC(X) X     &mt LC(C) C                  &mt LC(V) V  &mt LC(B) B  &lt 3 GRAVE      &mt K_CANCEL BACKSPACE  &mt LS(N) N  &mt LS(M) M  &mt LESS_THAN COMMA  &mt GREATER_THAN PERIOD  &mt LS(QUESTION) SLASH
 &lt 2 EXCLAMATION  &mt LCTRL LBKT  &mt LEFT_SHIFT SINGLE_QUOTE  &mkp RCLK    &kp SPACE    &mkp LCLK        &mt LA(ENTER) ENTER     &lt 1 ESC                                                               &mt LS(TAB) TAB
             >;
 
