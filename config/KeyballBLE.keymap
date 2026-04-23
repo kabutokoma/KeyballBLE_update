@@ -95,10 +95,10 @@
 
         L_JISnum {
             bindings = <
-&kp LG(D)      &none  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                                      &kp LC(HOME)  &kp UP     &kp LC(END)           &none      &kp INTERNATIONAL_1
-&kp LG(G)      &none  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &bt BT_SEL 0        &kp DELETE     &kp LEFT      &kp DOWN   &kp RIGHT             &none      &none
-&kp LWIN       &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp LEFT_SHIFT      &kp BACKSPACE  &kp LS(SEMI)  &kp MINUS  &kp LS(SINGLE_QUOTE)  &kp SLASH  &kp UNDER
-&kp LG(LS(S))  &none  &kp NUMBER_0  &kp LCTRL     &kp LS(LCTRL)  &kp LSHFT           &kp TAB        &none                                                     &kp LS(MINUS)
+&kp LG(D)      &none  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                                    &kp LC(HOME)  &kp UP     &kp LC(END)           &none      &kp INTERNATIONAL_1
+&kp LG(G)      &none  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &bt BT_SEL 0        &kp LC(L)    &kp LEFT      &kp DOWN   &kp RIGHT             &none      &none
+&kp LWIN       &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp LEFT_SHIFT      &kp LA(TAB)  &kp LS(SEMI)  &kp MINUS  &kp LS(SINGLE_QUOTE)  &kp SLASH  &kp UNDER
+&kp LG(LS(S))  &none  &kp NUMBER_0  &kp LCTRL     &kp LS(LCTRL)  &kp LSHFT           &kp TAB      &none                                                     &kp LS(MINUS)
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
