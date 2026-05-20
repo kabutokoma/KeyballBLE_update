@@ -1,6 +1,3 @@
-# Keyball BLE Keymap（修正版）
-
-```dts
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
 #include <behaviors.dtsi>
@@ -154,4 +151,3 @@
         };
     };
 };
-```
